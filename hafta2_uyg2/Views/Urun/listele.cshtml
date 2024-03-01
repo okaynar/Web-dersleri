@@ -1,0 +1,35 @@
+﻿@using hafta2_uyg2.Models;
+@model List<Urun>
+@{
+    ViewBag.Title = "listele";
+   
+}
+
+
+
+<div class="container">
+    <div class="row">
+
+        <h2>listele</h2>
+    </div>
+
+    <div class="row">
+       
+        @foreach (var item in Model)
+        {
+
+        
+        <div class="col-sm-4">
+            <div class="card" >
+                <img src="~/banzhow/img/@item.Resim" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">@item.Name</h5>
+                    <p class="card-text">@item.Acıklama</p>
+                    <a href="/urun/detaygoster/@item.Id" class="btn btn-primary">detay göster</a>
+                </div>
+            </div>
+        </div>
+
+        }
+    </div>
+</div>

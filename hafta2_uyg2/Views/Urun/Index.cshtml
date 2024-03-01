@@ -1,0 +1,33 @@
+﻿
+@model List< hafta2_uyg2.Models.Urun >
+@{
+    ViewBag.Title = "Index";
+    
+}
+
+<h2>Urun listesi</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>id </th>
+        <th>Urun adı </th>
+        <th>açıklama </th>
+        <th>fiyatı </th>
+        <th>resim </th>
+    </tr>
+
+
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item.Id  </td>
+            <td> @item.Name  </td>
+            <td> @item.Acıklama  </td>
+            <td> @item.Price  </td>
+            <td> @item.Resim </td>
+
+        </tr>
+    }
+
+</table>
